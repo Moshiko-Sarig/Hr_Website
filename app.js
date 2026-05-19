@@ -255,11 +255,62 @@
   setInterval(tick, 1000);
 })();
 
+/* ---------------- Mobile nav toggle ---------------- */
+(function () {
+  const btn = document.querySelector('.menu-btn');
+  const nav = document.querySelector('.primary-nav');
+  if (!btn || !nav) return;
+
+  function close() {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('nav-open');
+  }
+  function open() {
+    nav.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('nav-open');
+  }
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (nav.classList.contains('open')) close(); else open();
+  });
+
+  /* close on link tap */
+  nav.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => close());
+  });
+
+  /* close on outside click */
+  document.addEventListener('click', (e) => {
+    if (!nav.classList.contains('open')) return;
+    if (nav.contains(e.target) || btn.contains(e.target)) return;
+    close();
+  });
+
+  /* close on escape */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+
+  /* close if viewport grows past breakpoint */
+  const mq = window.matchMedia('(min-width: 900px)');
+  const onChange = () => { if (mq.matches) close(); };
+  if (mq.addEventListener) mq.addEventListener('change', onChange);
+  else mq.addListener(onChange);
+})();
+
 /* ---------------- Hero confetti / fireworks (lean) ---------------- */
 (function () {
   const canvas = document.querySelector('.hero-confetti');
   if (!canvas) return;
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  /* Mobile / touch: keep confetti rain, skip firework bursts (less perf cost,
+     no stray glow particles when hero stacks tall). */
+  const isMobile = window.innerWidth < 768 ||
+    (window.matchMedia && window.matchMedia('(hover: none) and (pointer: coarse)').matches);
 
   const ctx = canvas.getContext('2d', { alpha: true });
   /* cap dpr to 1.25 for big perf win on retina */
@@ -386,8 +437,8 @@
     }
     ctx.globalAlpha = 1;
 
-    /* periodic firework — capped */
-    if (now >= nextBurst && burst.length < 80) {
+    /* periodic firework — desktop only */
+    if (!isMobile && now >= nextBurst && burst.length < 80) {
       const pal = Math.random() < 0.7 ? GOLD : (Math.random() < 0.5 ? HOT : ACCENT);
       spawnBurst(rand(W * 0.2, W * 0.8), rand(H * 0.2, H * 0.5), 16 + ((Math.random() * 6) | 0), rand(2.4, 3.6), pal);
       nextBurst = now + rand(2800, 4800);
@@ -446,7 +497,9 @@
   if (heroEl) io.observe(heroEl);
   else rafId = requestAnimationFrame(loop);
 
-  requestAnimationFrame(() => requestAnimationFrame(openingSalute));
+  if (!isMobile) {
+    requestAnimationFrame(() => requestAnimationFrame(openingSalute));
+  }
 })();
 
 /* ---------------- Scrollspy: highlight active nav link ---------------- */
