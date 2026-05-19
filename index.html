@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>עובדים מצטיינים — המכון הגיאולוגי לישראל</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress" role="progressbar" aria-label="התקדמות גלילה" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+  <div class="scroll-progress-bar"></div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" data-screen-label="Header">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="המכון הגיאולוגי לישראל — דף הבית">
+      <img src="assets/gsi-logo.png" alt="" class="brand-mark">
+      <div class="brand-text">
+        <span class="brand-name">המכון הגיאולוגי לישראל</span>
+        <span class="brand-dept">אגף הון אנושי</span>
+        <span class="brand-sub">Geological Survey of Israel · נוסד 1949</span>
+      </div>
+    </a>
+
+    <nav class="primary-nav" aria-label="ניווט ראשי">
+      <a href="#about">על התהליך</a>
+      <a href="#awards">מסלולי המצוינות</a>
+      <a href="#process">שלבי התהליך</a>
+      <a href="#resources">מסמכים</a>
+    </nav>
+
+    <button class="menu-btn" aria-label="פתיחת תפריט" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" data-screen-label="Hero">
+    <canvas class="hero-confetti" aria-hidden="true"></canvas>
+    <div class="container hero-grid">
+
+      <div class="hero-copy">
+        <span class="eyebrow">הליך הוקרה · שנת 2025</span>
+        <h1 class="display">
+          תנו קרדיט<br>
+          למי שמגיע.
+        </h1>
+        <p class="lead">
+          מדי שנה מעניקה נציבות שירות המדינה אותות הוקרה לעובדים ולצוותים אשר בלטו בתרומתם ובהישגיהם המיוחדים.
+          <br><br>
+          במכון הגיאולוגי תרבות של הערכה והוקרה היא חלק בלתי נפרד מהעשייה היומיומית, זו הזדמנות להעניק הכרה רשמית, משמעותית ומכבדת לעובדות ולעובדים שתרומתם יוצאת הדופן סייעה לקידום פעילות המכון ולהצלחתו.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#awards">למעבר למסלולי ההוקרה
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M14 6l-6 6 6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#about">קראו על התהליך</a>
+        </div>
+
+        <div class="hero-meta">
+          <span class="meta-dot" aria-hidden="true"></span>
+          <span>מועד אחרון להגשה: <bdi>15/06/2026</bdi></span>
+        </div>
+      </div>
+
+      <aside class="countdown-card" aria-label="ספירה לאחור עד למועד האחרון להגשה">
+        <div class="countdown-head">
+          <span class="label-sm">זמן שנותר להגשה</span>
+          <span class="countdown-date"><bdi>15/06/2026</bdi></span>
+        </div>
+        <div class="countdown-grid" dir="ltr">
+          <div class="cd-cell"><span class="cd-num" data-cd="days">21</span><span class="cd-unit">ימים</span></div>
+          <div class="cd-sep" aria-hidden="true">:</div>
+          <div class="cd-cell"><span class="cd-num" data-cd="hours">10</span><span class="cd-unit">שעות</span></div>
+          <div class="cd-sep" aria-hidden="true">:</div>
+          <div class="cd-cell"><span class="cd-num" data-cd="minutes">18</span><span class="cd-unit">דקות</span></div>
+          <div class="cd-sep" aria-hidden="true">:</div>
+          <div class="cd-cell"><span class="cd-num" data-cd="seconds">41</span><span class="cd-unit">שניות</span></div>
+        </div>
+        <div class="countdown-foot">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+          <span>ההגשה נסגרת ב־23:59 בערב המועד האחרון</span>
+        </div>
+      </aside>
+
+    </div>
+
+    <svg class="hero-strata-art" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="strataA" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="rgba(0,56,184,0.03)"/>
+          <stop offset="100%" stop-color="rgba(0,56,184,0.10)"/>
+        </linearGradient>
+        <linearGradient id="strataB" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="rgba(201,162,39,0.05)"/>
+          <stop offset="100%" stop-color="rgba(201,162,39,0.12)"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,70 C300,30 600,90 900,55 S1320,75 1440,60 L1440,200 L0,200 Z" fill="url(#strataA)"/>
+      <path d="M0,110 C340,80 640,140 940,105 S1320,125 1440,115 L1440,200 L0,200 Z" fill="url(#strataB)"/>
+      <path d="M0,150 C320,120 620,180 920,150 S1320,170 1440,160 L1440,200 L0,200 Z" fill="url(#strataA)"/>
+      <path d="M0,180 C320,160 620,200 920,180 S1320,195 1440,185 L1440,200 L0,200 Z" fill="rgba(0,56,184,0.14)"/>
+    </svg>
+
+    <svg class="hero-medal" viewBox="0 0 220 300" aria-hidden="true">
+      <defs>
+        <linearGradient id="ribbonGrad" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0%" stop-color="#0038B8"/>
+          <stop offset="50%" stop-color="#3B6BD3"/>
+          <stop offset="100%" stop-color="#002C92"/>
+        </linearGradient>
+        <linearGradient id="medalGrad" x1="0.2" x2="0.8" y1="0" y2="1">
+          <stop offset="0%" stop-color="#FCE9A8"/>
+          <stop offset="45%" stop-color="#E5C76A"/>
+          <stop offset="100%" stop-color="#8B6B0F"/>
+        </linearGradient>
+        <radialGradient id="medalShine" cx="0.35" cy="0.3" r="0.6">
+          <stop offset="0%" stop-color="rgba(255,255,255,0.7)"/>
+          <stop offset="60%" stop-color="rgba(255,255,255,0)"/>
+        </radialGradient>
+      </defs>
+      <path d="M70,10 L150,10 L138,170 L110,158 L82,170 Z" fill="url(#ribbonGrad)"/>
+      <path d="M82,170 L110,158 L138,170 L130,200 L110,190 L90,200 Z" fill="#002C92"/>
+      <circle cx="110" cy="220" r="68" fill="url(#medalGrad)" stroke="#8B6B0F" stroke-width="3"/>
+      <circle cx="110" cy="220" r="56" fill="none" stroke="#8B6B0F" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+      <path d="M110,178 L120,206 L150,206 L126,224 L135,252 L110,234 L85,252 L94,224 L70,206 L100,206 Z" fill="#8B6B0F"/>
+      <circle cx="110" cy="220" r="68" fill="url(#medalShine)"/>
+    </svg>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about" data-screen-label="About">
+    <div class="container about-grid">
+      <header class="section-head">
+        <span class="label-sm">על התהליך</span>
+        <h2 class="headline-lg">כל מה שצריך לדעת לפני שמגישים</h2>
+      </header>
+
+      <div class="about-body">
+        <p>
+          הליך ההוקרה השנתי של שירות המדינה נועד להוקיר עובדים, וצוותים בעלי הישגים מיוחדים,
+          לבטא את ההערכה של שירות המדינה לתרומתם ולהניע למצוינות בשירות הציבורי.
+          המכון הגיאולוגי לישראל משתתף בתהליך מדי שנה, ומזמין את המנהלות והמנהלים להמליץ
+          על העובדים, והצוותים הראויים להוקרה.
+        </p>
+        <p>
+          קיימים חמישה מסלולי הצטיינות: מצוינות אישית, קפיצה תפקודית, מצוינות לצוותי משימה,
+          הוקרה על הצעת שיפור משמעותית, ומצוינות רבת שנים — יקיר שירות המדינה.
+          ההגשה מתבצעת דרך מנהלי האגפים, והזוכים נבחרים על ידי ועדה משרדית.
+        </p>
+        <p>
+          הזוכים מקבלים תעודת הוקרה משרדית ופרס כספי, ועובדים במסלול "יקיר שירות המדינה"
+          מקבלים תעודה החתומה בידי נציב שירות המדינה במעמד מכובד.
+        </p>
+        <dl class="about-stats">
+          <div><dt>שנת הליך</dt><dd>2025</dd></div>
+          <div><dt>מסלולי מצוינות</dt><dd>5</dd></div>
+          <div><dt>טפסי המלצה</dt><dd>4</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AWARDS ============ -->
+  <section class="section section-tint" id="awards" data-screen-label="Awards">
+    <div class="container">
+      <header class="section-head">
+        <span class="label-sm">מסלולי המצוינות</span>
+        <h2 class="headline-lg">חמישה מסלולים להוקרת מצוינות</h2>
+        <p class="section-sub">בחרו את המסלול המתאים לעובד או לצוות שעליו אתם ממליצים, קראו את תנאי הסף והורידו את טופס ההמלצה הרלוונטי.</p>
+      </header>
+
+      <nav class="awards-subnav" aria-label="ניווט מהיר במסלולי המצוינות">
+        <a class="awards-pill is-active" href="#track-1" data-target="1"><span class="num">01</span><span class="label-text">מצוינות אישית</span></a>
+        <a class="awards-pill" href="#track-2" data-target="2"><span class="num">02</span><span class="label-text">קפיצה תפקודית</span></a>
+        <a class="awards-pill" href="#track-3" data-target="3"><span class="num">03</span><span class="label-text">צוותי משימה</span></a>
+        <a class="awards-pill" href="#track-4" data-target="4"><span class="num">04</span><span class="label-text">הצעת שיפור משמעותית</span></a>
+        <a class="awards-pill" href="#track-5" data-target="5"><span class="num">05</span><span class="label-text">יקיר שירות המדינה</span></a>
+      </nav>
+
+      <ol class="track-index" role="list">
+
+        <li class="track" id="track-1" data-track="1" aria-expanded="true">
+          <button class="track-row" type="button" aria-controls="track-1-panel">
+            <span class="track-num"><bdi>01</bdi></span>
+            <span class="track-rule" aria-hidden="true"></span>
+            <span class="track-title">מצוינות אישית</span>
+            <span class="track-tag">פרס אישי · שנתי</span>
+            <span class="track-toggle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="track-panel" id="track-1-panel">
+            <div class="track-panel-inner">
+              <p class="track-lead">
+                הוקרה לעובדת או עובד שהפגינו ביצועים יוצאי דופן, יוזמה, חדשנות
+                ולקיחת אחריות לאורך שנת ההצטיינות.
+              </p>
+              <div class="track-detail track-detail-3col">
+                <div>
+                  <h4>תנאי סף</h4>
+                  <ul class="track-list">
+                    <li>העובד/ת הינו/ה עובד/ת מדינה פעיל/ה (לא בחל"ת), וסיים/ה את תקופת הניסיון בהצלחה (או לאחר שנתיים בתפקיד).</li>
+                    <li>לעובד/ת קיים גליון מלא של הערכת עובד "בשביל העתיד" עבור שנת ההצטיינות.</li>
+                    <li>העובד/ת לא נמצא כיום בהליך בירור משמעתי או פלילי, ולא הורשע/ה בחמש השנים הקלנדריות האחרונות בעבירות משמעת או בעבירות פליליות או שקיבל/ה התראה או נזיפה.</li>
+                    <li>הוקרה זו לא ניתנת לסגל הבכיר.</li>
+                    <li>הציון המסכם בגליון השנתי של הערכת העובדים "בשביל העתיד" נכלל ב־<bdi>20%</bdi> של הציונים הגבוהים במשרד בשנתיים האחרונות.</li>
+                    <li>העובד/ת לא קיבל/ה אות הוקרה על מצוינות אישית בשנתיים הקלנדריות שלפני שנת הבחירה (<bdi>2023–2024</bdi>).</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>אמות מידה לבחירה</h4>
+                  <ul class="track-list">
+                    <li>העובד/ת נוכח/ת בעבודה באופן סדיר, בעל/ת יחסי אנוש וממשקי עבודה מצוינים.</li>
+                    <li>ייזום מהלכי שינוי – שיפור וחדשנות.</li>
+                    <li>התנדבות בקהילה – מסודרת ושיטתית (דהיינו התנדבות קבועה ומתמשכת, לפחות שנה, במסגרת ארגונית מוכרת).</li>
+                    <li>לקיחת אחריות – על משימות נוספות מעבר לתפקיד המוגדר וביצוען בצורה מצוינת.</li>
+                    <li>ישנה השקעה ותרומה מוגברת ומרשימה בתחומי ביצוע התפקיד לאורך זמן ומעבר לנדרש ולמצופה מהתפקיד.</li>
+                    <li>ישנה השקעה ותרומה ניכרות בסבבה הארגונית/היחידתית לאורך זמן, וכן באופן המהווה מודל חיובי לחיקוי לאחרים המייצג את ערכי שירות המדינה.</li>
+                  </ul>
+                </div>
+                <div class="col-reward">
+                  <div class="reward-hero">
+                    <span class="reward-mul"><bdi>×1.5</bdi></span>
+                    <span class="reward-mul-label">משכורת<br>+ תעודה
+                      <span class="reward-hero-note">דרגה 20 בדירוג המנהלי</span>
+                    </span>
+                  </div>
+                  <h4>תגמול</h4>
+                  <ul class="track-list">
+                    <li>תעודת הוקרה משרדית.</li>
+                    <li>פרס כספי בשיעור של משכורת וחצי, ממשכורת דרגה <bdi>20</bdi> בדירוג המנהלי בשיא הוותק ללא תוספות.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="track-actions">
+                <a class="btn btn-primary" href="assets/forms/המלצה%20על%20עובד%20לפרס%20מצוינות%20אישית%20לשנת%202025.pdf" download>
+                  הורדת טופס ההמלצה
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="track" id="track-2" data-track="2" aria-expanded="false">
+          <button class="track-row" type="button" aria-controls="track-2-panel">
+            <span class="track-num"><bdi>02</bdi></span>
+            <span class="track-rule" aria-hidden="true"></span>
+            <span class="track-title">הוקרה על קפיצה תפקודית</span>
+            <span class="track-tag">3 שנים · שיפור מתמשך</span>
+            <span class="track-toggle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="track-panel" id="track-2-panel">
+            <div class="track-panel-inner">
+              <p class="track-lead">
+                הכרה בעובד או עובדת שהפגינו שיפור משמעותי ורציף בביצועים ובתפקוד
+                לאורך שלוש שנים רצופות.
+              </p>
+              <div class="track-detail track-detail-3col">
+                <div>
+                  <h4>תנאי סף</h4>
+                  <ul class="track-list">
+                    <li>העובד/ת הינו/ה עובד/ת מדינה פעיל/ה, וסיים/ה את תקופת הניסיון בהצלחה.</li>
+                    <li>קיימים לעובד שלושה גליונות הערכה ומשוב "בשביל העתיד" לשלוש השנים הקלנדריות שלפני שנת הבחירה (<bdi>2022–2024</bdi>).</li>
+                    <li>הציון המסכם בגליון השנתי של הערכת העובד "בשביל העתיד" עלה באופן רציף ומתמשך במדרג הציונים לאורך שלוש השנים הקלנדריות שלפני שנת הבחירה.</li>
+                    <li>העובד/ת לא נמצא כיום בהליך בירור משמעתי או פלילי, ולא הורשע/ה בחמש השנים הקלנדריות האחרונות בעבירות משמעת או בעבירות פליליות או שקיבל/ה התראה או נזיפה.</li>
+                    <li>הוקרה זו לא ניתנת לסגל הבכיר.</li>
+                    <li>הציון המסכם בגיליון השנתי האחרון לשנת <bdi>2025</bdi> של הערכת העובדים "בשביל העתיד" הוא מעל <bdi>5</bdi>.</li>
+                    <li>העובד לא קיבל אות לשיפור מצוינות אישית בעבר, בכל תפקידיו בשירות המדינה.</li>
+                    <li>ממונה ישיר יכול להמליץ על עובד אחד בלבד.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>אמות מידה לבחירה</h4>
+                  <ul class="track-list">
+                    <li>העובד/ת נוכח/ת בעבודה באופן סדיר, בעל/ת יחסי אנוש וממשקי עבודה מצוינים.</li>
+                    <li>לקיחת אחריות – על משימות נוספות מעבר לתפקיד המוגדר וביצוען בצורה מצוינת.</li>
+                    <li>ישנה השקעה ותרומה מוגברת ומרשימה בתחומי ביצוע התפקיד לאורך זמן ומעבר לנדרש ולמצופה מהתפקיד.</li>
+                    <li>ישנה השקעה ותרומה ניכרות בסבבה הארגונית/היחידתית לאורך זמן, וכן באופן המהווה מודל חיובי לחיקוי לאחרים המייצג את ערכי שירות המדינה.</li>
+                  </ul>
+                </div>
+                <div class="col-reward">
+                  <div class="reward-hero">
+                    <span class="reward-mul"><bdi>×1.5</bdi></span>
+                    <span class="reward-mul-label">משכורת או קורס
+                      <span class="reward-hero-note">בשווי זהה · לבחירת העובד</span>
+                    </span>
+                  </div>
+                  <h4>תגמול</h4>
+                  <ul class="track-list">
+                    <li>תעודת הוקרה משרדית.</li>
+                    <li>בחירת חלופי על ידי העובד:
+                      <ul class="track-sublist">
+                        <li>פרס כספי בשיעור של משכורת וחצי, ממשכורת דרגה <bdi>20</bdi> בדירוג המנהלי בשיא הוותק ללא תוספות.</li>
+                        <li>יציאה לקורס העשרתי/פיתוח אישי/מקצועי בשווי זה, אשר יאושר על ידי ועדת ההדרכה במשרד, מעבר לתכנית ההדרכה הסטנדרטית המוצעת לכל העובדים, כאשר היציאה לקורס תהיה על חשבון שעות העבודה של העובד/ת.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="track-actions">
+                <a class="btn btn-primary" href="assets/forms/המלצה%20על%20עובד%20להוקרה%20על%20קפיצה%20תפקודית%20לשנת%202025.pdf" download>
+                  הורדת טופס ההמלצה
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="track" id="track-3" data-track="3" aria-expanded="false">
+          <button class="track-row" type="button" aria-controls="track-3-panel">
+            <span class="track-num"><bdi>03</bdi></span>
+            <span class="track-rule" aria-hidden="true"></span>
+            <span class="track-title">מצוינות לצוותי משימה</span>
+            <span class="track-tag">צוות · עד <bdi>30</bdi> חברים</span>
+            <span class="track-toggle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="track-panel" id="track-3-panel">
+            <div class="track-panel-inner">
+              <p class="track-lead">
+                הוקרה לצוות שביצע משימה מוגדרת ומיוחדת, מעבר לעבודה השוטפת,
+                תוך קשרי גומלין מקצועיים לאורך כל ביצוע המשימה.
+              </p>
+              <div class="track-detail track-detail-3col">
+                <div>
+                  <h4>תנאי סף</h4>
+                  <p class="track-note">הפרס יוענק לצוות המופקד על ביצוע משימה משותפת ומוגדרת מראש, בהתאם לתנאי הסף המפורטים:</p>
+                  <ul class="track-list">
+                    <li>קיומו של כתב מינוי ו/או מכתב מטעם מנהל בכיר שעמד בראש הצוות, הכולל את שמות חברי הצוות, שם המשימה ומהותה, תוצאות נדרשות ולוח זמנים.</li>
+                    <li>הצוות מונה עד <bdi>30</bdi> עובדים.</li>
+                    <li>הקבוצה מופקדת על ביצוע משימה משותפת ומוגדרת מראש, המקיימת באופן מובנה קשרי גומלין מקצועיים ישירים. משימה זו אינה מהווה חלק מהעבודה השגרתית השוטפת של הקבוצה. קשרי גומלין אלו צריכים להתקיים בו זמנית בין כל חברי הקבוצה ולאורך כל תקופת מילוי המשימה.</li>
+                    <li>הצוות מצטיין בתחומי התפקוד והביצוע, כמפורט בגליון הערכת צוות.</li>
+                    <li>הישגי הצוות מצויים ברובד העליון במדרג הישגי הצוותים אשר מונו על ידי הממונה הממליץ.</li>
+                    <li>העובדים בצוות הם בעלי ותק של שנה בשירות המדינה, והציון המסכם בגליון הערכה ומשוב של שנת ההצטיינות של כל אחד מהעובדים הנמנים על הצוות הינו מעל ציון <bdi>4</bdi>.
+                      <p class="track-note track-note-inline">* עובד שלא עומד בתנאי זה יכול לקבל תעודת הערכה אך לא מענק.</p>
+                    </li>
+                    <li>העובד/ת לא נמצא כיום בהליך בירור משמעתי או פלילי, ולא הורשע/ה בחמש השנים הקלנדריות האחרונות בעבירות משמעת או בעבירות פליליות או שקיבל/ה התראה או נזיפה.</li>
+                  </ul>
+                  <p class="track-note">אין הגבלה על מחזוריות בתכנית מצוינות צוותית, עובד יכול לקבל פרס על מצוינות צוותית בכל שנה.</p>
+                </div>
+                <div>
+                  <h4>אמות מידה לבחירה</h4>
+                  <ul class="track-list">
+                    <li>השקעה ותרומה מוגברת ומרשימה בתחומי ביצוע משימת הצוות.</li>
+                    <li>התנהלות כצוות באופן המהווה מודל לחיקוי לצוותים אחרים.</li>
+                    <li>משימת הצוות בולטת בחיוניותה והכרחית להצלחת היחידה/המשרד.</li>
+                    <li>השפעת תוצרי הצוות הינה רחבת היקף ורב שנתית.</li>
+                    <li>עדיפות – הרכב צוות בין-יחידתי או בין-משרדי (בנסיבות אלה הממליץ יהיה הממונה העקיף).</li>
+                  </ul>
+                </div>
+                <div class="col-reward">
+                  <div class="reward-hero">
+                    <span class="reward-mul"><bdi>×6</bdi></span>
+                    <span class="reward-mul-label">משכורות לצוות
+                      <span class="reward-hero-note">עד משכורת אחת לעובד</span>
+                    </span>
+                  </div>
+                  <h4>תגמול</h4>
+                  <ul class="track-list">
+                    <li>תעודת הוקרה משרדית.</li>
+                    <li>פרס כספי בשיעור של עד <bdi>6</bdi> משכורות, ממשכורת דרגה <bdi>20</bdi> בדירוג המנהלי בשיא הוותק ללא תוספות, שתחולקנה בין חברי הצוות (אך לא יותר מגובה משכורת אחת לעובד).</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="track-actions">
+                <a class="btn btn-primary" href="assets/forms/המלצה%20לפרס%20על%20מצוינות%20לצוותי%20משימה%20לשנת%202025.pdf" download>
+                  הורדת טופס ההמלצה
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="track" id="track-4" data-track="4" aria-expanded="false">
+          <button class="track-row" type="button" aria-controls="track-4-panel">
+            <span class="track-num"><bdi>04</bdi></span>
+            <span class="track-rule" aria-hidden="true"></span>
+            <span class="track-title">הוקרה על הצעת שיפור משמעותית</span>
+            <span class="track-tag">יחיד או צוות</span>
+            <span class="track-toggle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="track-panel" id="track-4-panel">
+            <div class="track-panel-inner">
+              <p class="track-lead">
+                הצעת שיפור של עובד יחיד או של צוות שנועדה לשפר את המצוינות הארגונית בעבודת המשרד או היחידה,
+                או כמה משרדים או שירות המדינה כולו, והיא מהווה מתן מענה לצורך התואם את הייעוד, החזון,
+                תחומי האחריות והסמכות הארגוניים.
+              </p>
+              <div class="track-detail">
+                <div>
+                  <h4>תנאי סף להצעת שיפור הראויה לפרס</h4>
+                  <ul class="track-list">
+                    <li>הצעה שנמצאה בעלת פוטנציאל מדיד לשיפור המצוינות הארגונית, אשר להגשתה נתלוותה חוות דעת מוסמכת שהיא ניתנת ליישום ויש כוונה ליישמה.</li>
+                    <li>הצעת שיפור שתכלול תיאור ממוקד ומוגדר של תהליך המפורט מראשיתו ועד תומו. תהליך ששלביו, איכותו והיבטיו הכלכליים יוכיחו שיפור מדיד ביחס לתהליך הקיים, או הצעה המתארת תוצר מוגדר שמאפייניו מדידים והערך המוסף מיישומו ברור ומדיד.</li>
+                    <li>הצעה שהוועדה מתרשמת כי לא היתה מועלית ללא יוזמה מיוחדת של העובד או קבוצת העובדים.</li>
+                    <li>הצעה המבטאת ראיה מערכתית, יצירתיות וחדשנות.</li>
+                    <li>הצעה שהינה בתחום אחריותו של עובד ושהיא לא הוטלה עליו כמטלה מוגדרת על ידי הממונים עליו. ההצעה יכולה להיות מעבר לתחום אחריותו של העובד.</li>
+                  </ul>
+                  <p class="track-note">אין הגבלה על מחזוריות בתכנית הצעות שיפור, עובד יכול להגיש הצעת שיפור או להשתייך לצוות המגיש הצעת שיפור בכל שנה.</p>
+                </div>
+                <div class="col-reward">
+                  <div class="reward-hero">
+                    <span class="reward-mul"><bdi>×6</bdi></span>
+                    <span class="reward-mul-label">משכורות
+                      <span class="reward-hero-note">יחיד או צוות · אין הגבלת מחזוריות</span>
+                    </span>
+                  </div>
+                  <h4>תגמול</h4>
+                  <ul class="track-list">
+                    <li>תעודת הוקרה משרדית.</li>
+                    <li>פרס כספי בשיעור של עד <bdi>6</bdi> משכורות, ממשכורת דרגה <bdi>20</bdi> בדירוג המנהלי בשיא הוותק ללא תוספות, שתחולקנה בין חברי הצוות (אך לא יותר מגובה משכורת אחת לעובד).</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="track-actions">
+                <a class="btn btn-primary" href="assets/forms/המלצה%20להוקרה%20על%20הצעות%20שיפור%20משמעותיות%20לשנת%202025.pdf" download>
+                  הורדת טופס ההמלצה
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="track track-feature" id="track-5" data-track="5" aria-expanded="false">
+          <button class="track-row" type="button" aria-controls="track-5-panel">
+            <span class="track-num"><bdi>05</bdi></span>
+            <span class="track-rule" aria-hidden="true"></span>
+            <span class="track-title">יקיר שירות המדינה
+              <span class="track-badge">בין־משרדי</span>
+            </span>
+            <span class="track-tag">נציב שירות המדינה</span>
+            <span class="track-toggle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="track-panel" id="track-5-panel">
+            <div class="track-panel-inner">
+              <p class="track-lead">
+                מצוינות רבת שנים – התכנית ליקירי השירות – תכנית בין־משרדית.
+                אות יוקרתי לעובד/ת בעל/ת תרומה מיוחדת והישגים מרשימים לאורך
+                שנים רבות, המהווים דמות מופת ודוגמה אישית בשירות המדינה.
+              </p>
+              <div class="track-detail track-detail-3col">
+                <div>
+                  <h4>תנאי סף</h4>
+                  <ul class="track-list">
+                    <li>אות יקיר שירות המדינה מוענק לעובד/ת אשר צבר מעל <bdi>16</bdi> שנות עבודה בשירות המדינה.</li>
+                    <li>העובד/ת לא קיבל/ה אות זה בעבר.</li>
+                    <li>המלצת מנכ"ל המשרד על עובד אחד מהמשרד (ניתן להמליץ גם על עובד/ת שפרש או עבר למשרה אחרת בשירות הציבורי בשנים האחרונות).</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>אמות מידה לבחירה</h4>
+                  <ul class="track-list">
+                    <li>עובד/ת אשר הטביע/ה את חותמו/ה באופן ישיר על התנהלותו של כל שירות המדינה ו/או על השירות לציבור ברמה הארצית.</li>
+                    <li>עובד/ת אשר תרם תרומה משמעותית ומיוחדת והוא בעל הישגים מרשימים בתחום תפקידו או מקצועו בשירות המדינה.</li>
+                    <li>עובד/ת המהווה דמות מופת, דוגמא אישית בולטת, המשפיע/ה של תפקודם של הסובבים אותו/ה.</li>
+                  </ul>
+                </div>
+                <div class="col-reward">
+                  <div class="reward-hero">
+                    <span class="reward-mul"><bdi>×3</bdi></span>
+                    <span class="reward-mul-label">משכורות
+                      <span class="reward-hero-note">תעודה חתומה על ידי נציב שירות המדינה</span>
+                    </span>
+                  </div>
+                  <h4>תגמול</h4>
+                  <ul class="track-list">
+                    <li>תעודת הוקרה חתומה על ידי נציב שירות המדינה, שתוענק במעמד מכובד.</li>
+                    <li>פרס כספי בשיעור של שלוש משכורות ממשכורת דרגה <bdi>20</bdi> בדירוג המנהלי בשיא הוותק ללא תוספות.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="track-subsection">
+                <h4>תהליך הגשת מועמדים</h4>
+                <p>מנהל המכון יעביר מכתב המלצה מפורט על נימוקים, בצירוף קורות חיים ותמונה עדכנית של המועמד.</p>
+                <p>ועדה בין־משרדית בנציבות שירות המדינה בהשתתפות אנשי ציבור תדון במועמדים שיוגשו על ידי המשרדים ותקבע את מקבלי אות הנציב — יקיר השירות למצוינות רבת שנים. ועדת שיפוט בראשות נציב שירות המדינה תבחר עד שני עובדים להענקת האות פעם בשנה.</p>
+              </div>
+              <p class="track-note">* משרד אשר מועמדו ל"אות יקיר שירות המדינה" לא נבחר על ידי ועדת השיפוט, יוכל להעניק למועמד/ת תעודת הוקרה או שי שאינו כספי על הישגיו ותרומתו (ללא ציונו כיקיר שירות המדינה או יקיר המשרד).</p>
+              <div class="track-actions">
+                <a class="btn btn-primary" href="#" download>
+                  הורדת טופס ההמלצה
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ol>
+
+      <p class="award-footnote">
+        שימו לב: עובד לא יקבל בשנה קלנדרית כפל פרסים כספיים, אלא רק תעודות הוקרה והפרס הגבוה מבין הזכאויות.
+        תגמול על הצעת שיפור יכול להינתן בנפרד ובכפילות עם שאר התכניות.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section section-tint" id="process" data-screen-label="Process">
+    <div class="container">
+      <header class="section-head">
+        <span class="label-sm label-on-ink">שלבי התהליך</span>
+        <h2 class="headline-lg">מהפתיחה ועד הכרזת הזוכים</h2>
+      </header>
+
+      <ol class="process">
+        <li class="step">
+          <span class="step-num">01</span>
+          <span class="step-date"><bdi>01/06/2026</bdi></span>
+          <h3>פתיחת הליך הוקרה</h3>
+          <p>פרסום ההנחיות, המדדים וטפסי ההמלצה לכלל המנהלים במכון.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">02</span>
+          <span class="step-date"><bdi>15/06/2026</bdi> · מועד אחרון</span>
+          <h3>הגשת מועמדויות</h3>
+          <p>מנהלים ממלאים טפסי המלצה עבור עובדים או צוותים ושולחים למזכירות.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">03</span>
+          <span class="step-date">יולי – אוגוסט <bdi>2026</bdi></span>
+          <h3>דיוני ועדה</h3>
+          <p>ועדת ההוקרה המוסדית דנה ובוחנת את המועמדויות לפי המדדים.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">04</span>
+          <span class="step-date">אוגוסט – ספטמבר <bdi>2026</bdi></span>
+          <h3>בחירת הזוכים</h3>
+          <p>הכרזה רשמית, טקס הוקרה במכון והענקת תעודה ופרס כספי.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ RESOURCES ============ -->
+  <section class="section" id="resources" data-screen-label="Resources">
+    <div class="container resources-grid">
+
+      <article class="resource-hero">
+        <span class="label-sm">מסמכים ומידע</span>
+        <h2 class="headline-lg">נוהל ההוקרה המלא</h2>
+        <p>
+          קראו את הנוהל המלא לפני מילוי טופס ההמלצה. המסמך כולל את כל תנאי הסף,
+          אמות המידה לבחירה, תהליכי הדיון בוועדת השיפוט, מכסות והתגמולים הכספיים.
+        </p>
+        <a class="btn btn-primary" href="assets/forms/נוהל%20הוקרה%20על%20הישגים%20מיוחדים%202025%20-%20המכון%20הגיאולוגי.pdf" download>
+          הורדת הנוהל המלא (<bdi>PDF</bdi>)
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <span class="resource-meta">עודכן לאחרונה · מאי <bdi>2026</bdi></span>
+      </article>
+
+      <aside class="resource-side">
+        <div class="side-block">
+          <span class="label-sm">לשאלות והבהרות</span>
+          <h3>צריכים עזרה?</h3>
+          <p>לכל שאלה בהליך ההוקרה ניתן לפנות לטל כהן מאגף הון אנושי של המכון.</p>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">דוא"ל</span>
+              <a dir="ltr" href="mailto:talc@gsi.gov.il">talc@gsi.gov.il</a>
+            </li>
+            <li>
+              <span class="contact-label">גוף</span>
+              <span>אגף הון אנושי, המכון הגיאולוגי</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="side-block forms-block">
+          <span class="label-sm">טפסי המלצה להורדה</span>
+          <h3>ארבעה טפסים זמינים</h3>
+          <ul class="forms-list">
+            <li>
+              <a href="assets/forms/המלצה%20על%20עובד%20לפרס%20מצוינות%20אישית%20לשנת%202025.pdf" download>
+                <span class="form-name">מצוינות אישית</span>
+                <span class="form-meta">טופס המלצה · <bdi>PDF</bdi></span>
+                <svg class="form-ico" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="assets/forms/המלצה%20על%20עובד%20להוקרה%20על%20קפיצה%20תפקודית%20לשנת%202025.pdf" download>
+                <span class="form-name">קפיצה תפקודית</span>
+                <span class="form-meta">טופס המלצה · <bdi>PDF</bdi></span>
+                <svg class="form-ico" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="assets/forms/המלצה%20לפרס%20על%20מצוינות%20לצוותי%20משימה%20לשנת%202025.pdf" download>
+                <span class="form-name">מצוינות לצוותי משימה</span>
+                <span class="form-meta">טופס המלצה · <bdi>PDF</bdi></span>
+                <svg class="form-ico" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="assets/forms/המלצה%20להוקרה%20על%20הצעות%20שיפור%20משמעותיות%20לשנת%202025.pdf" download>
+                <span class="form-name">הצעת שיפור משמעותית</span>
+                <span class="form-meta">טופס המלצה · <bdi>PDF</bdi></span>
+                <svg class="form-ico" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  </main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" data-screen-label="Footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="assets/gsi-logo.png" alt="" class="footer-mark">
+      <div>
+        <div class="footer-name">המכון הגיאולוגי לישראל</div>
+        <div class="footer-sub">Geological Survey of Israel · נוסד 1949</div>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <div class="label-sm">קישורים</div>
+        <ul>
+          <li><a href="#about">על התהליך</a></li>
+          <li><a href="#awards">מסלולי המצוינות</a></li>
+          <li><a href="#process">שלבי התהליך</a></li>
+          <li><a href="#resources">מסמכים</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="label-sm">יצירת קשר</div>
+        <ul>
+          <li>טל כהן · אגף הון אנושי</li>
+          <li><a href="mailto:talc@gsi.gov.il" dir="ltr">talc@gsi.gov.il</a></li>
+          <li>המכון הגיאולוגי לישראל, ירושלים</li>
+        </ul>
+      </div>
+      <div>
+        <div class="label-sm">נגישות ופרטיות</div>
+        <ul>
+          <li><a href="#">הצהרת נגישות</a></li>
+          <li><a href="#">מדיניות פרטיות</a></li>
+          <li><a href="#">תנאי שימוש</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <div class="container footer-bar-inner">
+      <span>© <bdi>2026</bdi> המכון הגיאולוגי לישראל · כל הזכויות שמורות</span>
+      <span class="muted">משרד האנרגיה והתשתיות · שירות המדינה</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
