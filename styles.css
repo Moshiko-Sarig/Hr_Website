@@ -312,8 +312,10 @@ button { font-family: inherit; }
   gap: 14px;
 }
 .brand-mark {
-  width: 200px; height: 200px;
+  width: clamp(56px, 14vw, 200px);
+  height: clamp(56px, 14vw, 200px);
   object-fit: contain;
+  flex-shrink: 0;
 }
 .brand-text { line-height: 1.15; }
 .brand-name {
@@ -1329,6 +1331,7 @@ button { font-family: inherit; }
 @media (max-width: 600px) {
   .brand-text { display: none; }
   .header-inner { height: 72px; }
+  .brand-mark { width: 52px; height: 52px; }
   .countdown-grid { gap: 4px; }
   .cd-cell { padding: 12px 4px 8px; }
   .cd-num { font-size: 28px; }
