@@ -1144,6 +1144,17 @@ button { font-family: inherit; }
 }
 .contact-list a { color: var(--accent); font-weight: 600; }
 .contact-list a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.contact-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 20px 0 18px;
+}
+.contact-subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--ink);
+}
 
 /* ---------------------- process ---------------------- */
 
@@ -1310,6 +1321,8 @@ button { font-family: inherit; }
   color: var(--ink-3);
 }
 .footer-bar-inner .muted { color: var(--ink-4); }
+.footer-credit { color: var(--ink-3); font-weight: 500; letter-spacing: 0.01em; }
+.footer-credit bdi { color: var(--accent); font-weight: 600; }
 
 /* ---------------------- small-screen polish ---------------------- */
 
