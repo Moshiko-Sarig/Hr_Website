@@ -1825,8 +1825,8 @@ button { font-family: inherit; }
 
   .primary-nav {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: var(--header-h);
     inset-inline: 0;
     flex-direction: column;
     align-items: stretch;
@@ -1838,8 +1838,10 @@ button { font-family: inherit; }
     -webkit-backdrop-filter: none;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    box-shadow: none;
+    box-shadow: 0 12px 24px -16px rgba(10,37,64,0.25);
     z-index: 60;
+    max-height: calc(100vh - var(--header-h));
+    overflow-y: auto;
   }
   .primary-nav.open { display: flex; }
   .primary-nav a {
@@ -1864,10 +1866,5 @@ button { font-family: inherit; }
     border-color: var(--accent);
   }
 
-  body.nav-open {
-    position: fixed;
-    inset-inline: 0;
-    width: 100%;
-    overflow: hidden;
-  }
+  body.nav-open { overflow: hidden; }
 }
