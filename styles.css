@@ -36,11 +36,16 @@
 
   /* typography */
   --font: "Heebo", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* header sizing — reserved by body padding so shrink does not shift layout */
+  --header-h: clamp(120px, 22vw, 240px);
+  --header-top: 3px;
 }
 
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; overflow-x: hidden; max-width: 100%; }
-html { scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; overflow-x: clip; max-width: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: clamp(90px, 9vw, 120px); }
+body { padding-top: calc(var(--header-h) + var(--header-top)); }
 
 /* ============== Animations bundle ============== */
 
@@ -107,17 +112,54 @@ html { scroll-behavior: smooth; }
 
 /* Header shrink + glass on scroll */
 .site-header {
-  transition: background-color 280ms ease, box-shadow 280ms ease, border-color 280ms ease, backdrop-filter 280ms ease;
+  transition: top 280ms ease, margin-inline 280ms ease, background-color 280ms ease,
+              box-shadow 280ms ease, border-color 280ms ease, border-radius 280ms ease,
+              backdrop-filter 280ms ease;
 }
+.site-header { overflow-anchor: none; }
 .site-header.scrolled {
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: saturate(180%) blur(14px);
-  -webkit-backdrop-filter: saturate(180%) blur(14px);
-  box-shadow: 0 12px 30px -22px rgba(10, 37, 64, 0.25);
-  border-bottom-color: rgba(17, 21, 28, 0.06);
+  top: 14px;
+  margin-inline: clamp(24px, 8vw, 120px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.42) 0%,
+    rgba(255, 255, 255, 0.28) 50%,
+    rgba(255, 255, 255, 0.38) 100%
+  );
+  backdrop-filter: saturate(220%) blur(34px) brightness(1.05);
+  -webkit-backdrop-filter: saturate(220%) blur(34px) brightness(1.05);
+  box-shadow: 0 30px 60px -22px rgba(10, 37, 64, 0.38),
+              0 8px 22px -10px rgba(10, 37, 64, 0.18),
+              inset 0 1px 0 rgba(255, 255, 255, 0.85),
+              inset 0 -1px 0 rgba(255, 255, 255, 0.25),
+              inset 1px 0 0 rgba(255, 255, 255, 0.35),
+              inset -1px 0 0 rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 9999px;
 }
-.header-inner { transition: padding-block 260ms ease; }
-.site-header.scrolled .header-inner { padding-block: 6px; }
+.site-header.scrolled::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0) 45%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+.site-header.scrolled .header-inner {
+  height: clamp(64px, 8vw, 88px);
+  padding-block: 6px;
+}
+.site-header.scrolled .brand-mark {
+  width: clamp(44px, 6vw, 64px);
+  height: clamp(44px, 6vw, 64px);
+}
+.brand-mark { transition: width 280ms ease, height 280ms ease; }
+.header-inner { transition: height 280ms ease, padding-block 260ms ease; }
 
 /* Countdown digit flip */
 .cd-num {
@@ -293,8 +335,9 @@ button { font-family: inherit; }
 }
 
 .site-header {
-  position: sticky;
-  top: 3px;
+  position: fixed;
+  top: var(--header-top);
+  inset-inline: 0;
   z-index: 50;
   background: rgba(255,255,255,0.92);
   backdrop-filter: saturate(180%) blur(8px);
@@ -304,7 +347,7 @@ button { font-family: inherit; }
   display: flex;
   align-items: center;
   gap: var(--lg);
-  height: 300px;
+  height: var(--header-h);
 }
 .brand {
   display: flex;
@@ -354,10 +397,18 @@ button { font-family: inherit; }
   border-radius: var(--r-md);
   transition: background 120ms, color 120ms;
 }
-.primary-nav a:hover,
-.primary-nav a.active {
+.primary-nav a:hover {
   background: var(--surface-container);
   color: var(--ink);
+}
+.primary-nav a.active {
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: 0 6px 16px -8px rgba(0, 56, 184, 0.55);
+}
+.primary-nav a.active:hover {
+  background: var(--accent-700);
+  color: var(--on-accent);
 }
 .menu-btn {
   margin-inline-start: auto;
@@ -1329,6 +1380,7 @@ button { font-family: inherit; }
 /* ---------------------- small-screen polish ---------------------- */
 
 @media (max-width: 600px) {
+  :root { --header-h: 72px; }
   .brand-text { display: none; }
   .header-inner { height: 72px; }
   .brand-mark { width: 52px; height: 52px; }
@@ -1776,10 +1828,13 @@ button { font-family: inherit; }
     color: var(--ink);
     text-align: start;
   }
-  .primary-nav a:hover,
-  .primary-nav a.active {
+  .primary-nav a:hover {
     background: var(--accent-50);
     color: var(--accent-700);
+  }
+  .primary-nav a.active {
+    background: var(--accent);
+    color: var(--on-accent);
   }
 
   .menu-btn[aria-expanded="true"] {
