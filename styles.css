@@ -304,7 +304,7 @@ button { font-family: inherit; }
   display: flex;
   align-items: center;
   gap: var(--lg);
-  height: 88px;
+  height: 300px;
 }
 .brand {
   display: flex;
@@ -312,7 +312,7 @@ button { font-family: inherit; }
   gap: 14px;
 }
 .brand-mark {
-  width: 56px; height: 56px;
+  width: 200px; height: 200px;
   object-fit: contain;
 }
 .brand-text { line-height: 1.15; }
@@ -604,6 +604,7 @@ button { font-family: inherit; }
   border-radius: 14px;
   overflow: hidden;
   transition: background 200ms ease, box-shadow 280ms ease, transform 280ms ease, border-color 200ms;
+  scroll-margin-top: 180px;
 }
 .track:hover { border-color: var(--border-strong); }
 
@@ -1587,7 +1588,7 @@ button { font-family: inherit; }
 
 /* Header — never overflow */
 .header-inner {
-  height: clamp(64px, 9vw, 88px);
+  height: clamp(120px, 22vw, 240px);
   gap: clamp(12px, 2vw, 24px);
 }
 .brand { min-width: 0; }
