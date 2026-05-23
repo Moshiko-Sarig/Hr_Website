@@ -1800,7 +1800,9 @@ button { font-family: inherit; }
 /* ---------- Mobile nav drawer (< 900px) ---------- */
 @media (max-width: 899px) {
   .site-header {
-    position: sticky;
+    position: fixed;
+    top: 0;
+    inset-inline: 0;
     background: #ffffff;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -1862,5 +1864,10 @@ button { font-family: inherit; }
     border-color: var(--accent);
   }
 
-  body.nav-open { overflow: hidden; }
+  body.nav-open {
+    position: fixed;
+    inset-inline: 0;
+    width: 100%;
+    overflow: hidden;
+  }
 }

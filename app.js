@@ -271,12 +271,17 @@
   const nav = document.querySelector('.primary-nav');
   if (!btn || !nav) return;
 
+  let lockedY = 0;
   function close() {
     nav.classList.remove('open');
     btn.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('nav-open');
+    document.body.style.top = '';
+    window.scrollTo(0, lockedY);
   }
   function open() {
+    lockedY = window.scrollY || window.pageYOffset || 0;
+    document.body.style.top = `-${lockedY}px`;
     nav.classList.add('open');
     btn.setAttribute('aria-expanded', 'true');
     document.body.classList.add('nav-open');
