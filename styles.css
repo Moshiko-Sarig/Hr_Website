@@ -1800,6 +1800,20 @@ button { font-family: inherit; }
 /* ---------- Mobile nav drawer (< 900px) ---------- */
 @media (max-width: 899px) {
   .site-header { position: sticky; }
+  .site-header.scrolled {
+    top: var(--header-top);
+    margin-inline: 0;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: saturate(180%) blur(8px);
+    -webkit-backdrop-filter: saturate(180%) blur(8px);
+    box-shadow: none;
+  }
+  .site-header.scrolled::before { display: none; }
+  .site-header.scrolled .header-inner { height: var(--header-h); padding-block: 0; }
+  .site-header.scrolled .brand-mark { width: clamp(56px, 14vw, 200px); height: clamp(56px, 14vw, 200px); }
   .header-inner { position: relative; }
 
   .primary-nav {
