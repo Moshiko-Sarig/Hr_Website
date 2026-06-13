@@ -226,8 +226,8 @@
 
 /* ---------------- Countdown ---------------- */
 (function () {
-  // 15/06/2026 23:59:59 Asia/Jerusalem -> approximate to local
-  const target = new Date(2026, 5, 15, 23, 59, 59);
+  // 22/06/2026 23:59:59 Asia/Jerusalem -> approximate to local
+  const target = new Date(2026, 5, 22, 23, 59, 59);
 
   const cells = {
     days: document.querySelector('[data-cd="days"]'),
